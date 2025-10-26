@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:context="http://www.springframework.org/schema/context"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd">
+
+        <!--
+                applicationContext.xml: XML tabanlı Spring konfigürasyonu örneği.
+                Bu dosya, paket taraması (component-scan) sayesinde org.example içindeki
+                @Component, @Service veya @Repository ile işaretlenmiş sınıfları otomatik
+                olarak konteynere ekler.
+
+                Bu projede Java konfigürasyonu (IocConfig) kullanıldığından Main içinde
+                XML konteyner aktif olarak kullanılmamaktadır. Yine de referans amaçlı
+                bırakılmıştır ve component-scan örneği olarak kullanılabilir.
+        -->
+
+        <context:component-scan base-package="org.example" />
+
+</beans>
